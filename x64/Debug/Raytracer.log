@@ -1,0 +1,7 @@
+﻿  Raytracer.cpp
+D:\GitProjects\MasterRaycaster\Vector4.h(32,3): warning C4244: 'return': 'double' - 'float' dönüşümü; veri kaybı olabilir
+D:\GitProjects\MasterRaycaster\Matrix4.h(31,13): warning C4244: 'başlatılıyor': 'double' - 'float' dönüşümü; veri kaybı olabilir
+D:\GitProjects\MasterRaycaster\Matrix4.h(44,13): warning C4244: 'başlatılıyor': 'double' - 'float' dönüşümü; veri kaybı olabilir
+D:\GitProjects\MasterRaycaster\Matrix4.h(58,13): warning C4244: 'başlatılıyor': 'double' - 'float' dönüşümü; veri kaybı olabilir
+D:\GitProjects\MasterRaycaster\Matrix4.h(98,9): warning C4244: 'başlatılıyor': 'std::streamsize' - 'int' dönüşümü; veri kaybı olabilir
+  Raytracer.vcxproj -> D:\GitProjects\MasterRaycaster\x64\Debug\Raytracer.exe
