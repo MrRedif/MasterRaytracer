@@ -3,9 +3,9 @@
 class Matrix4
 {
 public:
-	float mdata[4][4];
+	double mdata[4][4];
 
-	static Matrix4 Translate(float x,float y = 0,float z = 0) {
+	static Matrix4 Translate(double x, double y = 0, double z = 0) {
 		Matrix4 m = Matrix4();
 		m.mdata[0][0] = 1;
 		m.mdata[1][1] = 1;
@@ -17,7 +17,7 @@ public:
 		return m;
 	}
 
-	static Matrix4 Scale(float x, float y = 0, float z = 0) {
+	static Matrix4 Scale(double x, double y = 0, double z = 0) {
 		Matrix4 m = Matrix4();
 		m.mdata[0][0] = x;
 		m.mdata[1][1] = y;
@@ -26,11 +26,11 @@ public:
 		return m;
 	}
 
-	static Matrix4 RotateX(float angle) {
+	static Matrix4 RotateX(double angle) {
 		Matrix4 m = Matrix4();
-		float rad =  M_PI / 180 * angle;
-		float c = cos(rad);
-		float s = sin(rad);
+		double rad =  M_PI / 180 * angle;
+		double c = cos(rad);
+		double s = sin(rad);
 		m.mdata[0][0] = 1;
 		m.mdata[3][3] = 1;
 		m.mdata[1][1] = c;
@@ -39,11 +39,11 @@ public:
 		m.mdata[1][2] = -s;
 		return m;
 	}
-	static Matrix4 RotateY(float angle) {
+	static Matrix4 RotateY(double angle) {
 		Matrix4 m = Matrix4();
-		float rad = M_PI / 180 * angle;
-		float c = cos(rad);
-		float s = sin(rad);
+		double rad = M_PI / 180 * angle;
+		double c = cos(rad);
+		double s = sin(rad);
 		m.mdata[0][0] = c;
 		m.mdata[2][2] = c;
 		m.mdata[0][2] = s;
@@ -53,11 +53,11 @@ public:
 
 		return m;
 	}
-	static Matrix4 RotateZ(float angle) {
+	static Matrix4 RotateZ(double angle) {
 		Matrix4 m = Matrix4();
-		float rad = M_PI / 180 * angle;
-		float c = cos(rad);
-		float s = sin(rad);
+		double rad = M_PI / 180 * angle;
+		double c = cos(rad);
+		double s = sin(rad);
 		m.mdata[0][0] = c;
 		m.mdata[0][1] = -s;
 		m.mdata[1][0] = s;
@@ -70,10 +70,10 @@ public:
 
 
 	friend Vector4 operator*(const Matrix4& m,const Vector4& v) {
-		float x = v.x * m.mdata[0][0] + v.y * m.mdata[0][1] + v.z * m.mdata[0][2] + v.w * m.mdata[0][3];
-		float y = v.x * m.mdata[1][0] + v.y * m.mdata[1][1] + v.z * m.mdata[1][2] + v.w * m.mdata[1][3];
-		float z = v.x * m.mdata[2][0] + v.y * m.mdata[2][1] + v.z * m.mdata[2][2] + v.w * m.mdata[2][3];
-		float w = v.x * m.mdata[3][0] + v.y * m.mdata[3][1] + v.z * m.mdata[3][2] + v.w * m.mdata[3][3];
+		double x = v.x * m.mdata[0][0] + v.y * m.mdata[0][1] + v.z * m.mdata[0][2] + v.w * m.mdata[0][3];
+		double y = v.x * m.mdata[1][0] + v.y * m.mdata[1][1] + v.z * m.mdata[1][2] + v.w * m.mdata[1][3];
+		double z = v.x * m.mdata[2][0] + v.y * m.mdata[2][1] + v.z * m.mdata[2][2] + v.w * m.mdata[2][3];
+		double w = v.x * m.mdata[3][0] + v.y * m.mdata[3][1] + v.z * m.mdata[3][2] + v.w * m.mdata[3][3];
 
 		return Vector4(x,y,z,w);
 	}

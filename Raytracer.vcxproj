@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ray.h" />
     <ClCompile Include="Raytracer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="3DScene.h" />
     <ClInclude Include="Matrix4.h" />
     <ClInclude Include="Vector4.h" />
   </ItemGroup>

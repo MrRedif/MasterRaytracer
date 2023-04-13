@@ -1,0 +1,39 @@
+{
+	"group" : [
+		{ 
+			"sphere" : {
+				"center" : [0, 0, 0],
+				"radius" : 1,
+				"color" : [255, 0, 0]
+			}
+		},
+		{ 
+			"sphere" : {
+				"center" : [1, 1, 1],
+				"radius" : 0.75,
+				"color" : [0, 255, 0]
+			}
+		},
+		{ 
+			"sphere" : {
+				"center" : [-1, -1, 1],
+				"radius" : 0.75,
+				"color" : [0, 255, 0]
+			}
+		},
+		{ 
+			"sphere" : {
+				"center" : [-1, 1, -1],
+				"radius" : 0.75,
+				"color" : [0, 0, 255]
+			}
+		},
+		{ 
+			"sphere" : {
+				"center" : [1, -1, -1],
+				"radius" : 0.75,
+				"color" : [0, 0, 255]
+			}
+		}
+	]
+}
